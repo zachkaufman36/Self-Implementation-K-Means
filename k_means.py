@@ -76,7 +76,7 @@ class KMeans:
             if new_location.size == 0: 
                 self.centroids[cluster_id] = self.seed.uniform(low = min_bounds, high = max_bounds)
             else: 
-                self.centroids[cluster_id] = np.mean(new_location, axis = 0, shape = min_bounds.shape[0])
+                self.centroids[cluster_id] = np.mean(new_location, axis = 0)
 
     """
     Function: Calculate the distance between centroids to determine if more runs are necessary
